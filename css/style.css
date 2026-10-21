@@ -1,5 +1,230 @@
-footer {
-    background-color: #76e244;
-    color: rgb(0, 0, 0);
+     /***********************************
+         * Folhas de Estilo do Frist Front *
+         ***********************************/
 
-}
+     /* Reset */
+
+     * {
+         box-sizing: border-box;
+         outline: none;
+     }
+
+     a {
+         text-decoration: none;
+         color: greenyellow;
+     }
+
+     a:hover {
+         color: greenyellow;
+     }
+
+     html,
+     body {
+
+         position: relative;
+         width: 100%;
+         margin: 0;
+         padding: 0;
+
+         /* Definir a fonte padrão e o tamanho */
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+         font-size: 16px;
+         /* 
+            O atributo acima define uma unidade "rem". 
+            Iso significa que 1rem = 16px, .5rem = 8px, 2rem = 32px
+            */
+
+         /*Sticky Footer*/
+         min-height: 100%;
+
+     }
+
+     /* Fundo Da Pagina*/
+     /* .. <- Serve para sair da pasta e ir buscar em uma outra (caminho relativo)*/
+
+     body {
+         background-image: url('../img/background.jpg');
+         background-position: center;
+         background-repeat: none;
+         background-size: cover;
+         background-attachment: fixed;
+
+     }
+
+     /* Remove margens fos titulos. */
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6 {
+         margin: 0;
+         padding: .85rem;
+     }
+
+     #wrap {
+         min-height: 100wh;
+         display: flex;
+         flex-direction: column;
+     }
+
+     /***** Cabeçalho *****/
+
+     /* Seleciona o elemento "header" que é filho direto do emelento div#wrap */
+     #wrap>header {
+         background-color: green;
+         padding: 1rem;
+
+     }
+
+     /* Apenas imagem dentro do header. */
+     #wrap>header img {
+         display: block;
+         width: 5rem;
+         height: auto;
+
+     }
+
+     /* Alinha o titulo da pagina*/
+     #wrap>header>div {
+         display: flex;
+         align-items: center;
+     }
+
+     /* Formulário de pesquisa no header. */
+     #wrap>header>form {
+         margin-top: 1rem;
+         display: flex;
+     }
+
+     /*o campo cresce o maximo possivel*/
+     #wrap>header>form input {
+         flex-grow: 1;
+         border-radius: .8rem 0 0 .8rem;
+         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+
+     }
+
+     #wrap>header>form button {
+         border-radius: 0 .8rem .8rem 0;
+     }
+
+     /* Seleciona todos os filhos do form*/
+     #wrap>header>form>* {
+
+         /*herda as confg da fonte dos elementos raiz*/
+         font-size: inherit;
+         font-family: inherit;
+         border: none;
+         padding: .5rem;
+         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+     }
+
+
+
+     /* Título (nome) do site. */
+     #wrap>header h1 {
+         font-size: 2.5rem;
+         color: #fff;
+         line-height: 1;
+         --webkit-text-stroke: .7px rgb(7, 11, 54);
+         padding: 0;
+         padding-left: .85rem;
+     }
+
+     /*****Menu principal ******/
+     #wrap>nav {
+         background-color: rgb(18, 9, 59);
+         display: flex;
+         justify-content: space-around;
+         border-top: 1px solid rgb(18, 9, 59);
+         border-bottom: 1px solid rgb(18, 9, 59);
+     }
+
+     #wrap>nav a {
+         padding: .5rem;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: .3rem;
+         color: greenyellow;
+         transition: .2s;
+     }
+
+     /* quando o cursor do mouse esta sobre*/
+     #wrap>nav a:hover {
+         background-color: green;
+         color: rgb(18, 9, 59);
+
+     }
+
+     #wrap>nav i {
+         font-size: 2rem;
+     }
+
+     #wrap>footer {
+         background-color: rgb(18, 9, 59);
+         color: white;
+         display: flex;
+         justify-content: space-between;
+     }
+
+     #wrap>footer>a {
+         padding: .3rem;
+         color: greenyellow;
+     }
+
+     #wrap>footer>a:hover {
+         background-color: greenyellow;
+         color: rgb(18, 9, 59);
+     }
+
+     #wrap>footer i {
+         font-size: 1.5rem;
+     }
+
+
+     #wrap>main {
+         /* Sticky footer */
+         flex: 1;
+         min-height: 100%;
+         display: flex;
+         flex-direction: column;
+     }
+
+     #wrap>main section,
+     #wrap>main article {
+         padding: 0 1.5rem;
+         background-color: rgba(255, 255, 255, 0.747);
+
+         /* Sticky footer */
+         flex: 1;
+     }
+
+     #wrap>main aside {
+         background-color: rgba(255, 255, 255, 0.747);
+         padding: 0 1rem;
+     }
+
+     #wrap>main {
+         /* Sticky footer */
+         flex: 1;
+         min-height: 100%;
+         display: flex;
+         flex-direction: column;
+     }
+
+     #wrap>main section {
+         flex: 1;
+
+
+     }
+
+     #wrap>
+     /***** Classes de uso geral *****/
+
+     /* Imagens responsivas */
+     img.responsive {
+         max-width: 100%;
+         width: auto;
+     }
