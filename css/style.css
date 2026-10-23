@@ -66,6 +66,12 @@
          min-height: 100wh;
          display: flex;
          flex-direction: column;
+
+         /* Largura maxima do conteudo*/
+         max-width: 1024px;
+
+         /* Centralizar*/
+         margin:auto;
      }
 
      /***** Cabeçalho *****/
